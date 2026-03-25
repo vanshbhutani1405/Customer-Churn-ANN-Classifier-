@@ -4,6 +4,8 @@ import tensorflow as tf
 import pandas as pd
 import pickle
 from tensorflow.keras.models import load_model
+import os
+os.environ["TF_USE_LEGACY_KERAS"] = "1"
 
 #Loading
 model = load_model(
