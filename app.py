@@ -10,7 +10,8 @@ os.environ["TF_USE_LEGACY_KERAS"] = "1"
 #Loading
 model = tf.keras.models.load_model(
     "model.keras",
-    compile=False
+    compile=False,
+    safe_mode=False
 )
 
 with open('label_encoder_gender.pkl', 'rb') as file:
