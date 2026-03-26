@@ -8,7 +8,10 @@ import os
 os.environ["TF_USE_LEGACY_KERAS"] = "1"
 
 #Loading
-model = tf.keras.models.load_model('model.keras')
+model = tf.keras.models.load_model(
+    "model.keras",
+    compile=False
+)
 
 with open('label_encoder_gender.pkl', 'rb') as file:
     label_encoder_gender = pickle.load(file)
